@@ -33,12 +33,14 @@ let currentUnit = "metric";
 // CUSTOM AUDIO FILES
 // ===================================
 
+
 const bmiSounds = {
-    underweight: new Audio("./audio/underweight.mp3"),
-    normal: new Audio("./audio/normal.mp3"),
-    overweight: new Audio("./audio/overweight.mp3"),
-    obesity: new Audio("./audio/obesity.mp3")
+    underweight: new Audio("./underweight.mp3"),
+    normal: new Audio("./normal.mp3"),
+    overweight: new Audio("./overweight.mp3"),
+    obesity: new Audio("./obesity.mp3")
 };
+
 
 // Preload audio files
 Object.values(bmiSounds).forEach(audio => {
