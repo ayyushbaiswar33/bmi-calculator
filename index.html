@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your Body Mass Index with our free interactive BMI calculator.">
+  <title>BMI Calculator | HealthTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">✚</span>
+      HealthTrack
+    </a>
+    <span class="nav-label">PERSONAL HEALTH TOOLS</span>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <span class="eyebrow">YOUR HEALTH, YOUR WAY</span>
+      <h1>BMI <span>Calculator</span></h1>
+      <p>
+        Understand your Body Mass Index and get a quick
+        overview of your weight category.
+      </p>
+    </section>
+
+    <section class="calculator">
+
+      <div class="form-section">
+        <div class="section-heading">
+          <div>
+            <span class="step">STEP 01</span>
+            <h2>Your Measurements</h2>
+          </div>
+          <span class="heading-icon">⚖</span>
+        </div>
+
+        <div class="unit-selector">
+          <button class="unit-btn active" data-unit="metric">
+            Metric (kg, cm)
+          </button>
+          <button class="unit-btn" data-unit="imperial">
+            Imperial (lb, in)
+          </button>
+        </div>
+
+        <form id="bmiForm">
+
+          <div class="input-group">
+            <label for="height">Height</label>
+            <div class="input-wrapper">
+              <input
+                type="number"
+                id="height"
+                placeholder="Enter your height"
+                min="1"
+                step="any"
+                required
+              >
+              <span id="heightUnit">cm</span>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="weight">Weight</label>
+            <div class="input-wrapper">
+              <input
+                type="number"
+                id="weight"
+                placeholder="Enter your weight"
+                min="1"
+                step="any"
+                required
+              >
+              <span id="weightUnit">kg</span>
+            </div>
+          </div>
+
+          <div id="errorMessage" class="error" role="alert"></div>
+
+          <button type="submit" class="calculate-btn">
+            Calculate My BMI <span>→</span>
+          </button>
+
+          <button type="button" id="resetBtn" class="reset-btn">
+            ↻ Reset calculator
+          </button>
+
+        </form>
+      </div>
+
+      <div class="result-section">
+        <div class="section-heading">
+          <div>
+            <span class="step">STEP 02</span>
+            <h2>Your Results</h2>
+          </div>
+          <span class="heading-icon">◉</span>
+        </div>
+
+        <div class="result-card" aria-live="polite">
+
+          <span class="result-label">YOUR BODY MASS INDEX</span>
+
+          <div class="bmi-number" id="bmiValue">--.-</div>
+
+          <div class="category-badge" id="bmiCategory">
+            Awaiting results
+          </div>
+
+          <p class="result-description" id="resultDescription">
+            Enter your measurements to discover your BMI category.
+          </p>
+
+          <div class="gauge">
+            <div class="gauge-track">
+              <div class="gauge-segment under"></div>
+              <div class="gauge-segment normal"></div>
+              <div class="gauge-segment over"></div>
+              <div class="gauge-segment obese"></div>
+            </div>
+            <div class="gauge-marker" id="gaugeMarker"></div>
+          </div>
+
+          <div class="gauge-labels">
+            <span>Underweight</span>
+            <span>Normal</span>
+            <span>Overweight</span>
+            <span>Obese</span>
+          </div>
+
+          <div class="result-details">
+            <div class="detail-box">
+              <span>Healthy BMI range</span>
+              <strong>18.5 – 24.9</strong>
+            </div>
+
+            <div class="detail-box">
+              <span>Healthy weight range</span>
+              <strong id="healthyWeight">--</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="disclaimer">
+          BMI is a screening tool, not a medical diagnosis.
+          Adult BMI categories are not suitable for children,
+          teenagers or pregnancy.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="info-section">
+      <div class="info-heading">
+        <span class="eyebrow">UNDERSTAND YOUR RESULTS</span>
+        <h2>BMI Categories</h2>
+        <p>Standard BMI classifications for adults.</p>
+      </div>
+
+      <div class="category-grid">
+        <div class="category-item">
+          <span class="category-dot under-dot"></span>
+          <div>
+            <h3>Underweight</h3>
+            <p>Below 18.5</p>
+          </div>
+        </div>
+
+        <div class="category-item">
+          <span class="category-dot normal-dot"></span>
+          <div>
+            <h3>Normal Weight</h3>
+            <p>18.5 – 24.9</p>
+          </div>
+        </div>
+
+        <div class="category-item">
+          <span class="category-dot over-dot"></span>
+          <div>
+            <h3>Overweight</h3>
+            <p>25 – 29.9</p>
+          </div>
+        </div>
+
+        <div class="category-item">
+          <span class="category-dot obese-dot"></span>
+          <div>
+            <h3>Obesity</h3>
+            <p>30 and above</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 HealthTrack. Made for a healthier tomorrow.</p>
+    <p>Health information for educational purposes only.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
